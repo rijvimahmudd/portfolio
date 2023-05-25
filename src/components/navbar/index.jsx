@@ -39,7 +39,7 @@ const Navbar = () => {
 					<Typography
 						variant="h5"
 						sx={{ flexGrow: 1 }}
-						fontWeight={'bold'}
+						fontWeight={'bolder'}
 						fontFamily={'macondo'}
 						letterSpacing={1.5}
 					>
