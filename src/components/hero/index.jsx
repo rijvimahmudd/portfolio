@@ -1,9 +1,29 @@
-import { Box, Card, Typography, CardContent, CardMedia } from '@mui/material';
+import {
+	Box,
+	Card,
+	Typography,
+	CardContent,
+	CardMedia,
+	Link,
+	Button,
+} from '@mui/material';
 import Profession from './profession';
 import Typewriter from 'typewriter-effect';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import { styled } from '@mui/material/styles';
 
-const profession =
-	'Web Developer || Programmer || Problem Solver || Software Engineer';
+const profession = [
+	'web developer',
+	'programmer',
+	'problem solver',
+	'software engineer',
+];
+
+const BootstrapButton = styled(Button)({
+	'&:hover': {
+		backgroundColor: '#003140',
+	},
+});
 
 const Hero = () => {
 	return (
@@ -43,6 +63,33 @@ const Hero = () => {
 						Full Stack Developer
 					</Typography>
 					<Profession profession={profession} color={'#22c55e'}></Profession>
+
+					<BootstrapButton
+						sx={{
+							backgroundColor: '#22c55e',
+							padding: '10px 20px',
+							color: '#ffffff',
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							gap: 0.6,
+							mt: 1.3,
+						}}
+					>
+						<Link
+							href="/Rijvi_Mahmud.pdf"
+							target={'_blank'}
+							color={'#ffffff'}
+							underline="none"
+						>
+							RESUME
+						</Link>
+						<DescriptionOutlinedIcon
+							sx={{
+								fontSize: '1.25rem',
+							}}
+						></DescriptionOutlinedIcon>
+					</BootstrapButton>
 				</CardContent>
 			</Box>
 			<CardMedia
