@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from '@mui/material';
+import { Box, Container, Link, Stack, Typography } from '@mui/material';
 
 const menuLinks = [
 	{
@@ -25,6 +25,8 @@ const Navbar = () => {
 			<Box
 				sx={{
 					height: '70px',
+					position: 'fixed',
+					width: '100%',
 					// backgroundColor: 'orange',
 				}}
 			>
@@ -34,6 +36,8 @@ const Navbar = () => {
 						display: 'flex',
 						// alignContent: 'center',
 						height: '100%',
+						width: '100%',
+						// position: 'absolute',
 					}}
 				>
 					<Typography
@@ -43,8 +47,11 @@ const Navbar = () => {
 						fontFamily={'macondo'}
 						letterSpacing={1.5}
 					>
-						Rijvi Mahmud.
+						<Link href="/">
+							<Box component={'img'} height={'54px'} src="/logo.svg"></Box>
+						</Link>
 					</Typography>
+
 					<Stack direction={'row'} spacing={3}>
 						{menuLinks.map((item, index) => {
 							return (

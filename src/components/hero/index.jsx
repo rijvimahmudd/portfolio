@@ -31,14 +31,14 @@ const Hero = () => {
 			sx={{
 				display: 'flex',
 				gap: '55px',
-				height: '85vh',
+				height: '88vh',
 				alignItems: 'center',
 				background: 'none',
 			}}
 		>
 			<Box
 				// border={'1px solid white'}
-				sx={{ display: 'flex', flexDirection: 'column', marginTop: -5 }}
+				sx={{ display: 'flex', flexDirection: 'column' }}
 			>
 				<CardContent sx={{ flex: '1 0 auto' }}>
 					<Typography variant="h5" fontWeight={'medium'} color={'#22c55e'}>
@@ -46,7 +46,7 @@ const Hero = () => {
 					</Typography>
 					<Typography
 						variant="h2"
-						ml={'-4px'}
+						ml={'-2px'}
 						fontWeight={'bolder'}
 						color={'#ffffff'}
 					>
