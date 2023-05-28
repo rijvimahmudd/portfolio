@@ -27,7 +27,8 @@ const Navbar = () => {
 					height: '70px',
 					position: 'fixed',
 					width: '100%',
-					// backgroundColor: 'orange',
+					zIndex: '999',
+					backgroundColor: '#111a28',
 				}}
 			>
 				<Container
