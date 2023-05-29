@@ -31,7 +31,7 @@ const Hero = () => {
 			sx={{
 				display: 'flex',
 				gap: '55px',
-				height: '88vh',
+				height: '90vh',
 				alignItems: 'center',
 				background: 'none',
 			}}

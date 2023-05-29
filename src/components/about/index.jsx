@@ -5,13 +5,23 @@ const Img = styled('img')({
 	margin: 'auto',
 	display: 'block',
 	maxWidth: '100%',
-	maxHeight: '300px',
-	filter: 'drop-shadow(30px 10px 4px rgba(0,0,0,0.15))',
+	// borderBottom: '10px solid green',
+	// maxHeight: '500px',
+	height: '30rem',
+	filter: `drop-shadow(5px 5px 5px rgba(34, 197, 94, 0.25)) 
+	drop-shadow(-5px -5px 5px rgba(34, 197, 94, 0.25))`,
 });
 
 const About = () => {
 	return (
-		<Grid container spacing={2} justifyContent={'space-between'}>
+		<Grid
+			container
+			spacing={2}
+			sx={{
+				alignItems: 'center',
+				height: '95vh',
+			}}
+		>
 			<Grid item xs={6}>
 				<Typography variant="h4">About Me</Typography>
 
