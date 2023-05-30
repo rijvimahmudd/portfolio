@@ -3,29 +3,6 @@ import { string, array } from 'prop-types';
 import React from 'react';
 
 const Profession = ({ profession = [], color = '' }) => {
-	// const modifiedProfession = profession.split(' || ');
-	// const result = modifiedProfession.map((element, index) => (
-	// 	<>
-	// 		{element}{' '}
-	// 		{index < modifiedProfession.length - 1 && (
-	// 			<Typography key={index} color={color} component={'span'} variant="h6">
-	// 				||{' '}
-	// 			</Typography>
-	// 		)}
-	// 	</>
-	// ));
-
-	// const result = profession.map((element, index) => (
-	// 	<>
-	// 		{element}{' '}
-	// 		{index < profession.length - 1 && (
-	// 			<Typography key={index} color={color} component={'span'} variant="h6">
-	// 				||{' '}
-	// 			</Typography>
-	// 		)}
-	// 	</>
-	// ));
-
 	const result = profession.map((element, index) => {
 		const modifiedElem = element
 			.split(' ')
