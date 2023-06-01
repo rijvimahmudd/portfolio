@@ -8,8 +8,8 @@ const Img = styled('img')({
 	// borderBottom: '10px solid green',
 	// maxHeight: '500px',
 	height: '30rem',
-	filter: `drop-shadow(5px 5px 5px rgba(34, 197, 94, 0.25)) 
-	drop-shadow(-5px -5px 5px rgba(34, 197, 94, 0.25))`,
+	filter: `drop-shadow(5px 5px 5px rgba(6.7, 14.9, 15.7, 1)) 
+	drop-shadow(-5px -5px 5px rgba(6.7, 14.9, 15.7, 1))`,
 });
 
 const About = () => {
