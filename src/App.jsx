@@ -12,11 +12,20 @@ function App() {
 	return (
 		<>
 			<CssBaseline />
+
 			<Navbar></Navbar>
-			<Container>
+			<Container
+				sx={{
+					clear: 'both',
+					overflow: 'auto',
+					// width: '80vw',
+					margin: 'auto',
+					border: '1px solid orange',
+				}}
+			>
 				<Box
 					sx={{
-						position: 'absolute',
+						// position: 'absolute',
 						marginTop: '70px',
 					}}
 				>

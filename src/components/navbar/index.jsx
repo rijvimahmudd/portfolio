@@ -48,7 +48,7 @@ const Navbar = () => {
 						fontFamily={'macondo'}
 						letterSpacing={1.5}
 					>
-						<Link href="/">
+						<Link href="/" sx={{ border: '1px solid white' }}>
 							<Box component={'img'} height={'54px'} src="/logo.svg"></Box>
 						</Link>
 					</Typography>

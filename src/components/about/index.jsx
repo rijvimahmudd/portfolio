@@ -1,8 +1,8 @@
-import { Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const Img = styled('img')({
-	margin: 'auto',
+	marginLeft: 'auto',
 	display: 'block',
 	maxWidth: '100%',
 	// borderBottom: '10px solid green',
@@ -14,28 +14,46 @@ const Img = styled('img')({
 
 const About = () => {
 	return (
-		<Grid
-			container
-			spacing={2}
-			sx={{
-				alignItems: 'center',
-				height: '95vh',
-			}}
-		>
-			<Grid item xs={6}>
-				<Typography variant="h4">About Me</Typography>
+		<Box sx={{ flexGrow: 1 }}>
+			<Grid
+				container
+				// rowSpacing={2}
+				columnGap={6}
+				sx={{
+					alignItems: 'center',
+					justifyContent: 'space-between',
+					height: '95vh',
+					// border: '1px solid white',
+					width: '100%',
+					// gridGap: '1px',
+				}}
+				// spacing={{ xs: 2, md: 3 }}
 
-				<Typography variant="body1">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vero
-					aut porro sit natus voluptate libero. Architecto, nulla
-					exercitationem. Rem eligendi consequuntur modi sit corrupti
-					repellendus esse ullam quisquam deserunt!
-				</Typography>
+				// columns={{ xs: 4, sm: 8, md: 12 }}
+			>
+				<Grid
+					item
+					xs={5}
+					sx={
+						{
+							// border: '1px solid white',
+						}
+					}
+				>
+					<Typography variant="h4">About Me</Typography>
+
+					<Typography variant="body1">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod vero
+						aut porro sit natus voluptate libero. Architecto, nulla
+						exercitationem. Rem eligendi consequuntur modi sit corrupti
+						repellendus esse ullam quisquam deserunt!
+					</Typography>
+				</Grid>
+				<Grid item xs={5}>
+					<Img src="/rijvi.png"></Img>
+				</Grid>
 			</Grid>
-			<Grid item xs={6}>
-				<Img src="/rijvi.png"></Img>
-			</Grid>
-		</Grid>
+		</Box>
 	);
 };
 
