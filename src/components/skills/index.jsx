@@ -84,7 +84,7 @@ const Skill = () => {
 				container
 				rowGap={10}
 				columnGap={3}
-				columns={14}
+				columns={12}
 				sx={{ justifyContent: 'center' }}
 			>
 				{skills.map((item, id) => (

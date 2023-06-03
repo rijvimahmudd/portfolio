@@ -5,6 +5,7 @@ import Hero from './components/hero';
 import About from './components/about';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import Skill from './components/skills';
+import Project from './components/projects';
 
 function App() {
 	//TODO - have to work on make title dynamic from profession
@@ -32,6 +33,7 @@ function App() {
 					<Hero></Hero>
 					<About></About>
 					<Skill></Skill>
+					<Project></Project>
 				</Box>
 			</Container>
 		</>
