@@ -16,6 +16,7 @@ function App() {
 
 			<Navbar></Navbar>
 			<Container
+				fixed
 				sx={{
 					clear: 'both',
 					overflow: 'auto',

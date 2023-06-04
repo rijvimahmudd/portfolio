@@ -1,12 +1,4 @@
-import {
-	Box,
-	Card,
-	CardActionArea,
-	CardMedia,
-	Tooltip,
-	Typography,
-	Grid,
-} from '@mui/material';
+import { Box, Tooltip, Typography, Stack, Fade } from '@mui/material';
 
 const skills = [
 	{
@@ -76,53 +68,42 @@ const skills = [
 ];
 const Skill = () => {
 	return (
-		<Box height={'95vh'} sx={{ border: '1px solid white' }}>
+		<Box height={'95vh'} sx={{ border: '1px solid white', width: '100%' }}>
 			<Typography variant="h4" fontWeight={'bold'} textAlign={'center'} m={3}>
 				Skills
 			</Typography>
-			<Grid
-				container
-				rowGap={10}
-				columnGap={3}
-				columns={12}
-				sx={{ justifyContent: 'center' }}
+
+			<Stack
+				direction={'row'}
+				justifyContent={'center'}
+				alignItems={'center'}
+				useFlexGap
+				spacing={10}
+				flexWrap={'wrap'}
+				// sx={{
+				// 	border: '1px solid tomato',
+				// }}
 			>
 				{skills.map((item, id) => (
-					<Grid item xs={1} key={id}>
-						<Tooltip
-							title={item.name.charAt(0).toUpperCase() + item.name.slice(1)}
-						>
-							<Card
-								sx={{
-									backgroundColor: 'transparent',
-									height: '60px',
-									width: '60px',
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center',
-									boxShadow: 'none',
-								}}
-							>
-								<CardActionArea>
-									<CardMedia
-										component="img"
-										image={item.icon}
-										alt={item.name}
-										sx={{
-											height: '60px',
-											width: '60px',
-											display: 'flex',
-											alignItems: 'center',
-											justifyContent: 'center',
-											margin: 'auto',
-										}}
-									/>
-								</CardActionArea>
-							</Card>
-						</Tooltip>
-					</Grid>
+					<Tooltip
+						key={id}
+						title={item.name.toUpperCase()}
+						arrow
+						TransitionComponent={Fade}
+						TransitionProps={{ timeout: 300 }}
+						// followCursor
+					>
+						<Box
+							component={'img'}
+							src={item.icon}
+							sx={{
+								width: '60px',
+								height: '60px',
+							}}
+						></Box>
+					</Tooltip>
 				))}
-			</Grid>
+			</Stack>
 		</Box>
 	);
 };

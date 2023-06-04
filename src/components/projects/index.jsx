@@ -1,38 +1,53 @@
-import { Card, CardContent, CardMedia, Grid } from '@mui/material';
+import { Grid, Card, CardContent } from '@mui/material';
+
+const data = [
+	{ id: 1, title: 'Card 1' },
+	{ id: 2, title: 'Card 2' },
+	{ id: 3, title: 'Card 3' },
+	// Add more cards to the data array if needed
+];
 
 const Project = () => {
-	// Number of items to display
-	const numberOfItems = 5;
-
 	return (
 		<Grid
 			container
-			sx={{
-				height: '95vh',
-				overflow: 'hidden',
-			}}
-			columnGap={14}
-			rowGap={4}
+			// spacing={2}
+			display={'flex'}
+			justifyContent={'flex-start'}
+			boxSizing={'border-box'}
 		>
-			{Array(numberOfItems)
-				.fill()
-				.map((_, id) => (
-					<Grid item xs={3} key={id}>
+			{data.map(card => (
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					md={4}
+					key={card.id}
+					sx={{
+						border: '1px solid pink',
+						width: '100%',
+						display: 'flex',
+					}}
+					justifyContent={'center'}
+				>
+					<div
+						style={{
+							display: 'flex',
+							justifyContent: 'space-between',
+						}}
+					>
 						<Card
 							sx={{
-								width: '350px',
+								width: '200px',
+								height: '300px',
+								margin: '0 4px',
 							}}
 						>
-							<CardContent>
-								<CardMedia
-									component={'img'}
-									src="https://images.unsplash.com/photo-1626726484686-1f0f1f9c4ec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-								/>
-								Item {id + 1} {/* Display the item number */}
-							</CardContent>
+							<CardContent>{card.title}</CardContent>
 						</Card>
-					</Grid>
-				))}
+					</div>
+				</Grid>
+			))}
 		</Grid>
 	);
 };
