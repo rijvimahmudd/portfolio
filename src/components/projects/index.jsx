@@ -1,4 +1,11 @@
-import { Grid, Card, CardContent } from '@mui/material';
+import {
+	Grid,
+	Card,
+	CardContent,
+	CardMedia,
+	CardActionArea,
+	Typography,
+} from '@mui/material';
 
 const data = [
 	{ id: 1, title: 'Card 1' },
@@ -9,46 +16,55 @@ const data = [
 
 const Project = () => {
 	return (
-		<Grid
-			container
-			// spacing={2}
-			display={'flex'}
-			justifyContent={'flex-start'}
-			boxSizing={'border-box'}
-		>
-			{data.map(card => (
-				<Grid
-					item
-					xs={12}
-					sm={6}
-					md={4}
-					key={card.id}
-					sx={{
-						border: '1px solid pink',
-						width: '100%',
-						display: 'flex',
-					}}
-					justifyContent={'center'}
-				>
-					<div
-						style={{
+		<>
+			<Typography variant="h4" fontWeight={'bold'} textAlign={'center'} m={3}>
+				Projects
+			</Typography>
+			<Grid
+				container
+				// spacing={2}
+				gap={0}
+				display={'flex'}
+				justifyContent={'space-between'}
+				boxSizing={'border-box'}
+			>
+				{data.map(card => (
+					<Grid
+						item
+						xs={12}
+						sm={6}
+						md={4}
+						key={card.id}
+						sx={{
+							border: '1px solid pink',
+							// width: '300px',
 							display: 'flex',
-							justifyContent: 'space-between',
 						}}
+						justifyContent={'space-around'}
 					>
 						<Card
 							sx={{
-								width: '200px',
-								height: '300px',
+								width: '95%',
+								height: '100%',
 								margin: '0 4px',
 							}}
 						>
-							<CardContent>{card.title}</CardContent>
+							<CardContent>
+								<CardMedia
+									component={'img'}
+									src="https://images.unsplash.com/photo-1611928482141-15f3896e635b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+								></CardMedia>
+							</CardContent>
+							<CardActionArea>
+								<Typography>live link</Typography>
+								<Typography>client side code link</Typography>
+								<Typography>server side code link</Typography>
+							</CardActionArea>
 						</Card>
-					</div>
-				</Grid>
-			))}
-		</Grid>
+					</Grid>
+				))}
+			</Grid>
+		</>
 	);
 };
 

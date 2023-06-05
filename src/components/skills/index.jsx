@@ -39,11 +39,7 @@ const skills = [
 	},
 	{
 		name: 'nextJs',
-		icon: 'https://www.svgrepo.com/show/354112/nextjs.svg',
-	},
-	{
-		name: 'redux',
-		icon: 'https://img.icons8.com/?size=512&id=jD-fJzVguBmw&format=svg',
+		icon: 'https://www.svgrepo.com/show/354113/nextjs-icon.svg',
 	},
 	{
 		name: 'redux',
@@ -58,17 +54,42 @@ const skills = [
 		icon: 'https://img.icons8.com/?size=512&id=kg46nzoJrmTR&format=svg',
 	},
 	{
-		name: 'expressJs',
-		icon: 'https://img.icons8.com/?size=512&id=kg46nzoJrmTR&format=svg',
+		name: 'c++',
+		icon: 'https://img.icons8.com/?size=512&id=TpULddJc4gTh&format=svg',
 	},
 	{
-		name: 'expressJs',
-		icon: 'https://img.icons8.com/?size=512&id=kg46nzoJrmTR&format=svg',
+		name: 'json',
+		icon: 'https://img.icons8.com/?size=512&id=122583&format=svg',
+	},
+	{
+		name: 'socket - io',
+		icon: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg',
+	},
+	{
+		name: 'yarn',
+		icon: 'https://www.vectorlogo.zone/logos/yarnpkg/yarnpkg-icon.svg',
+	},
+	{
+		name: 'git',
+		icon: 'https://img.icons8.com/?size=512&id=20906&format=svg',
+	},
+	{
+		name: 'github',
+		icon: 'https://img.icons8.com/?size=512&id=AZOZNnY73haj&format=svg',
+	},
+	{
+		name: 'visual studio code',
+		icon: 'https://img.icons8.com/?size=512&id=0OQR1FYCuA9f&format=svg',
+	},
+	{
+		name: 'notion',
+		icon: 'https://img.icons8.com/?size=512&id=nvtEH6DpqruC&format=svg',
 	},
 ];
 const Skill = () => {
 	return (
-		<Box height={'95vh'} sx={{ border: '1px solid white', width: '100%' }}>
+		// height={'95vh'}
+		<Box sx={{ border: '1px solid white', width: '100%', paddingBottom: 6 }}>
 			<Typography variant="h4" fontWeight={'bold'} textAlign={'center'} m={3}>
 				Skills
 			</Typography>

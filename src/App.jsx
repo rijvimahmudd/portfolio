@@ -9,7 +9,7 @@ import Project from './components/projects';
 
 function App() {
 	//TODO - have to work on make title dynamic from profession
-	useDocumentTitle('Rijvi Mahmud. - Web Developer | Problem Solver');
+	useDocumentTitle('Rijvi Mahmud - Web Developer | Problem Solver');
 	return (
 		<>
 			<CssBaseline />
