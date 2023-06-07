@@ -1,4 +1,12 @@
-import { Grid, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import {
+	Grid,
+	Card,
+	CardContent,
+	CardMedia,
+	Typography,
+	Stack,
+	Link,
+} from '@mui/material';
 import LaunchIcon from '@mui/icons-material/Launch';
 
 const data = [
@@ -45,7 +53,13 @@ const Project = () => {
 								borderRadius: '8px',
 							}}
 						>
-							<CardContent>
+							<CardContent
+								sx={{
+									display: 'flex',
+									flexDirection: 'column',
+									gap: 3,
+								}}
+							>
 								<CardMedia
 									component={'img'}
 									src="https://images.unsplash.com/photo-1611928482141-15f3896e635b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
@@ -53,18 +67,51 @@ const Project = () => {
 										borderRadius: '6px',
 									}}
 								></CardMedia>
-								<Typography
-									variant="subtitle2"
-									sx={{
-										display: 'flex',
-										alignItems: 'center',
-										justifyContent: 'space-between',
-									}}
-								>
-									Live Link <LaunchIcon fontSize="10px"></LaunchIcon>
-								</Typography>
-								<Typography>client side code link</Typography>
-								<Typography>server side code link</Typography>
+								<Stack>
+									<Typography variant="h4">Practice Project</Typography>
+									<Typography variant="subtitle2" fontWeight={'light'}>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Deleniti at soluta commodi sit perspiciatis autem esse
+										dolor.
+									</Typography>
+								</Stack>
+								<Stack gap={1}>
+									<Link
+										variant="subtitle2"
+										sx={{
+											display: 'flex',
+											alignItems: 'center',
+											justifyContent: 'space-between',
+											color: 'white',
+										}}
+									>
+										Live Link <LaunchIcon fontSize="10px"></LaunchIcon>
+									</Link>
+									<Link
+										variant="subtitle2"
+										sx={{
+											display: 'flex',
+											alignItems: 'center',
+											justifyContent: 'space-between',
+											color: 'white',
+										}}
+									>
+										Client Side Code Link{' '}
+										<LaunchIcon fontSize="10px"></LaunchIcon>
+									</Link>
+									<Link
+										variant="subtitle2"
+										sx={{
+											display: 'flex',
+											alignItems: 'center',
+											justifyContent: 'space-between',
+											color: 'white',
+										}}
+									>
+										Server Side Code Link
+										<LaunchIcon fontSize="10px"></LaunchIcon>
+									</Link>
+								</Stack>
 							</CardContent>
 						</Card>
 					</Grid>
