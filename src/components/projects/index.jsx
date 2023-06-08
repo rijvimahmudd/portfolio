@@ -83,6 +83,7 @@ const Project = () => {
 											alignItems: 'center',
 											justifyContent: 'space-between',
 											color: 'white',
+											cursor: 'pointer',
 										}}
 									>
 										Live Link <LaunchIcon fontSize="10px"></LaunchIcon>
@@ -94,6 +95,7 @@ const Project = () => {
 											alignItems: 'center',
 											justifyContent: 'space-between',
 											color: 'white',
+											cursor: 'pointer',
 										}}
 									>
 										Client Side Code Link{' '}
@@ -106,6 +108,7 @@ const Project = () => {
 											alignItems: 'center',
 											justifyContent: 'space-between',
 											color: 'white',
+											cursor: 'pointer',
 										}}
 									>
 										Server Side Code Link
