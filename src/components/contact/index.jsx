@@ -41,6 +41,10 @@ const Contact = () => {
 						name
 					</FormLabel>
 					<CssTextField id="name" fullWidth></CssTextField>
+					<FormLabel htmlFor="email" sx={{ color: 'white' }}>
+						email
+					</FormLabel>
+					<CssTextField id="email" fullWidth></CssTextField>
 				</FormControl>
 			</Box>
 		</Box>
