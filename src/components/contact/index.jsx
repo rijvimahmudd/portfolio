@@ -45,6 +45,21 @@ const Contact = () => {
 						email
 					</FormLabel>
 					<CssTextField id="email" fullWidth></CssTextField>
+					<FormLabel htmlFor="description" sx={{ color: 'white' }}>
+						Description
+					</FormLabel>
+					<CssTextField
+						id="description"
+						fullWidth
+						multiline
+						minRows={2}
+						sx={{
+							color: 'red',
+							'&:focus': {
+								color: 'white',
+							},
+						}}
+					></CssTextField>
 				</FormControl>
 			</Box>
 		</Box>
