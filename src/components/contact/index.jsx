@@ -53,12 +53,6 @@ const Contact = () => {
 						fullWidth
 						multiline
 						minRows={2}
-						sx={{
-							color: 'red',
-							'&:focus': {
-								color: 'white',
-							},
-						}}
 					></CssTextField>
 				</FormControl>
 			</Box>
